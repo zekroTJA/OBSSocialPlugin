@@ -1,5 +1,8 @@
 
-var GLOABL_DELAY = 5 * 60
+var animationDelay = parseInt(getComputedStyle(document.querySelector("html")).getPropertyValue("--delay"))
+
+
+var GLOABL_DELAY = animationDelay
 
 var containers = document.getElementsByClassName("container")
 var duration = parseInt(getComputedStyle(containers[0]).animationDuration.substring(0, 2))
@@ -18,6 +21,5 @@ function repeat() {
         e.parentNode.replaceChild(e.cloneNode(true), e)
     }
 }
-
 
 setInterval(repeat, (GLOABL_DELAY + duration * containers.length) * 1000)
