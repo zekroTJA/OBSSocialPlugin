@@ -1,4 +1,26 @@
+/*
+    OBS Social Plugin
+    © 2017 zekro Development
+*/
+
+
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,300';
+
+
+:root {
+    /*
+        This is the time delay after the info cards will shuffle again
+        (in seconds, without the time when they will be shown)
+    */
+    --delay: 300;
+
+    /*
+        This is the duration how long each card will be shown.
+        Dont forget to change keyframe percentages of "fade" if
+        you change the display time.
+    */
+    --duration: 12s;
+}
 
 
 @keyframes fade {
@@ -59,9 +81,4 @@
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 300;
-}
-
-:root {
-    --delay: 300;
-    --duration: 12s;
 }
